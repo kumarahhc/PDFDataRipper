@@ -473,7 +473,6 @@ line-height:115%;font-family:"Cambria",serif'>&nbsp;</span></p>
 
 <p class=MsoNormal>&nbsp;</p>
 
-<a href="apidocs/index.html">Link</a>
 
 </div>
 
