@@ -473,76 +473,7 @@ line-height:115%;font-family:"Cambria",serif'>&nbsp;</span></p>
 
 <p class=MsoNormal>&nbsp;</p>
 
-<h2 style='margin-left:.25in;text-indent:-.25in'><a name="_Toc133309311">5.<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>Convert
-PDFData object to Document Object</a></h2>
 
-<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%;font-family:
-"Cambria",serif'>The PDFData class provides the facility to map PDFData object
-to Document Object and return the Document object with corresponding data.</span></p>
-
-<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%;font-family:
-"Cambria",serif'>PDFData class provides a method “getTradenetDocument()” which
-return Document object. </span></p>
-
-<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%;font-family:
-"Cambria",serif'>Method of mapping:</span></p>
-
-<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in'><span
-style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Cambria",serif'>Search
-the same variable by name in the Document object and cast the String value in
-the PDFData object to the relevant variable type of the Document object.</span></p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Cambria",serif'>If
-no matching variable name is found in Document object, ignore the variable
-mapping.</span></p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Cambria",serif'>If
-the Variable type in Document object is Date, PDF configuration file should
-provide the format that need to use in converting String to Date.</span></p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in'><span
-style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Cambria",serif'>Table
-data will be mapped to ArrayList provided in the Document object, each row is
-then mapped to DocumentItem. Variable name provided in the Header configuration
-of pdf instruction file is used to map to relevant variable in DocumentItem. </span></p>
-
-<p class=MsoListParagraphCxSpLast style='text-indent:-.25in'><span
-style='font-size:12.0pt;line-height:115%;font-family:Symbol'>·<span
-style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span><span style='font-size:12.0pt;line-height:115%;font-family:"Cambria",serif'>Hence
-variable name provided in the configuration file should match to the variable
-name in Document or DocumentItem </span></p>
-
-<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%;font-family:
-"Cambria",serif'>&nbsp;</span></p>
-
-<p class=MsoNormal style='margin-left:.25in'><span style='font-size:12.0pt;
-line-height:115%;font-family:"Cambria",serif'>Sample code:</span></p>
-
-<p class=MsoNormal style='margin-left:.25in'><img width=553 height=123
-src="PDF_Data_Ripper_V1.1_files/image017.png"></p>
-
-<p class=MsoNormal><span style='font-size:12.0pt;line-height:115%;font-family:
-"Cambria",serif'>&nbsp;</span></p>
-
-<p class=MsoNormal><img width=624 height=450
-src="PDF_Data_Ripper_V1.1_files/image018.jpg"></p>
-
-<p class=MsoNormal>&nbsp;</p>
-
-<p class=MsoNormal><img width=624 height=423 id="Picture 1"
-src="PDF_Data_Ripper_V1.1_files/image019.jpg"></p>
 
 </div>
 
