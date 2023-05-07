@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Finfiguration file to read PO
+-->
+<config>
+	<readByArea>
+		<area id="pacling_slip">
+			<topLeftXY>372,105</topLeftXY>
+			<width>209</width>
+			<height>116</height>
+			<readType>FindByText</readType>
+			<pageNo>1</pageNo>
+			<variables>
+				<var id="orderNo" type="int">
+					<searchText>Cust. Order #</searchText>
+				</var>
+				<var id="generatedAt" type="Date" format="dd MMM yyyy">
+					<searchText>Date</searchText>
+				</var>
+				<var id="account">
+					<searchText>Account #</searchText>
+				</var>
+				<var id="customer_order">
+					<searchText>Cust. Order #</searchText>
+				</var>
+				<var id="abn" type="String">
+					<searchText>ABN #</searchText>
+				</var>
+			</variables>
+		</area>
+		<area id="delivery_address">
+			<topLeftXY>40,155</topLeftXY>
+			<width>254</width>
+			<height>105</height>
+			<readType>FullText</readType>
+			<pageNo>1</pageNo>
+		</area>
+	</readByArea>
+	<readTable id="table">
+		<startPage>1</startPage>
+		<endPage>1</endPage>
+		<tableType>single</tableType> <!--single or EachPage-->
+		<rowFormat>multiple</rowFormat>
+		<startY>266</startY>
+		<startX>40</startX>
+		<headerPresent>YES</headerPresent>
+		<header>
+			<cell id="vendorItemCode" type="String">
+				<text>Stockcode</text>
+				<leftMargin>2</leftMargin>
+			</cell>
+			<cell id="itemDescription1" type="String">
+				<text>Description</text>
+				<leftMargin>10</leftMargin>
+			</cell>
+			<cell id="requestedQty" type="int">
+				<text>Ordered</text>
+				<leftMargin>0</leftMargin>
+			</cell>
+			<cell id="suppliedQty" type="int">
+				<text>Supplied</text>
+				<leftMargin>10</leftMargin>
+			</cell>
+			<cell id="bk_ord" type="int">
+				<text>BK Ord</text>
+				<leftMargin>5</leftMargin>
+			</cell>
+			<cell id="invoicedQty" type="int">
+				<text>Supp Now</text>
+				<leftMargin>6</leftMargin>
+				<rightMargin>20</rightMargin>
+			</cell>
+		</header>
+		<rowIdentificationColumn>1</rowIdentificationColumn>
+		<endOfTable>
+			<method>EndByLenght</method>
+			<endText></endText>
+			<endY>755</endY>
+		</endOfTable>
+	</readTable>
+</config>
+
+<!--
+radType= {
+	"FullText" 		: read the text inside area and return whole text
+	"FindByTExt" 	: read text inside area line by line and use the provided string to find the line. once it found replace the search string with empty and return the rest of the line as the result 
+}
+-->
+

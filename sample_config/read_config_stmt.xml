@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<readTable id="table">
+		<startPage>1</startPage>
+		<endPage>30</endPage>
+		<tableType>EachPage</tableType> <!--single or EachPage-->
+		<rowFormat>single</rowFormat>
+		<startY>142</startY>
+		<startX>13.5</startX>
+		<headerPresent>NO</headerPresent>
+		<header>			
+			<cell id="documentId">
+				<width>68</width>
+			</cell>
+			<cell id="createdAt" type="Date" format="dd/mm/yy">
+				<width>63</width>
+			</cell>
+			<cell id="">
+				<width>27</width>
+			</cell>
+			<cell id="">
+				<width>131</width>
+			</cell>
+			<cell id="">
+				<width>103</width>
+			</cell>
+			<cell id="">
+				<width>70</width>
+			</cell>
+			<cell id="">
+				<width>96.5</width>
+			</cell>
+			<cell id="">
+				<width>119.5</width>
+			</cell>
+			<cell id="">
+				<width>123.5</width>
+			</cell>
+		</header>
+		<rowIdentificationColumn>1</rowIdentificationColumn>
+		<endOfTable>
+			<method>EndByPage</method>
+		</endOfTable>
+	</readTable>
+</config>
+
+<!--
+radType= {
+	"FullText" 		: read the text inside area and return whole text
+	"FindByTExt" 	: read text inside area line by line and use the provided string to find the line. once it found replace the search string with empty and return the rest of the line as the result 
+}
+-->
+

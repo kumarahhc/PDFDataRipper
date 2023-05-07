@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Finfiguration file to read PO
+-->
+<config>
+	<readByArea>
+		<area id="po_data">
+			<topLeftXY>311,87</topLeftXY>
+			<width>242</width>
+			<height>81</height>
+			<readType>FindByText</readType>
+			<pageNo>1</pageNo>
+			<variables>
+				<var id="orderNo" type="int">
+					<searchText>Order No :</searchText>
+				</var>
+				<var id="generatedAt" type="Date" format="dd/mm/yy">
+					<searchText>Order Date:</searchText>
+				</var>
+				<var id="order_by">
+					<searchText>Ordered by :</searchText>
+				</var>
+				<var id="required_date" type="Date" format="dd/mm/yy">
+					<searchText>Date Required :</searchText>
+				</var>
+			</variables>
+		</area>
+		<area id="instructions">
+			<topLeftXY>374,257</topLeftXY>
+			<width>194</width>
+			<height>32</height>
+			<readType>FullText</readType>
+			<pageNo>1</pageNo>
+		</area>
+		<area id="cus_address">
+			<topLeftXY>37,178</topLeftXY>
+			<width>232</width>
+			<height>74</height>
+			<readType>FullText</readType>
+			<pageNo>1</pageNo>
+		</area>
+		<area id="delivery_address">
+			<topLeftXY>310,178</topLeftXY>
+			<width>250</width>
+			<height>75</height>
+			<readType>FullText</readType>
+			<pageNo>1</pageNo>
+		</area>
+	</readByArea>
+	<readInDodument id="document_values">
+		<startPageNo>1</startPageNo>
+		<endPageNo></endPageNo>
+		<field id="total_value" type="String">
+			<searchText>Total</searchText>
+			<searchLenght>108</searchLenght>
+			<dropSearchText>YES</dropSearchText>
+			<searchStartY>455</searchStartY>
+			<searchEndY></searchEndY>
+		</field>
+		<field id="order_weight" type="int">
+			<searchText>Order Weight:</searchText>
+			<searchLenght>108</searchLenght>
+			<dropSearchText>YES</dropSearchText>
+			<searchStartY></searchStartY>
+			<searchEndY></searchEndY>
+		</field>
+	</readInDodument>
+	<readTable id="table">
+		<startPage>1</startPage>
+		<endPage>1</endPage>
+		<tableType>single</tableType> <!--single or EachPage-->
+		<rowFormat>multiple</rowFormat>
+		<startY>287</startY>
+		<startX>0</startX>
+		<headerPresent>YES</headerPresent>
+		<header>
+			<cell id="vendorItemCode" type="String">
+				<text>Product No.</text>
+				<type>String</type>
+				<leftMargin>4.8</leftMargin>
+			</cell>
+			<cell id="itemDescription1" type="String">
+				<text>Description</text>
+				<leftMargin>7.8</leftMargin>
+			</cell>
+			<cell id="customerItemCode" type="String">
+				<text>S/O No.</text>
+				<leftMargin>6</leftMargin>
+			</cell>
+			<cell id="itemDescription2" type="String">
+				<text>Catalogue No.</text>
+				<leftMargin>6</leftMargin>
+			</cell>
+			<cell id="requestedQty" type="int">
+				<text>Qty</text>
+				<leftMargin>14</leftMargin>
+			</cell>
+			<cell id="uom" type="String">
+				<text>UM</text>
+				<leftMargin>2</leftMargin>
+			</cell>
+			<cell id="unitPriceInclGst" type="Flaot">
+				<text>Price</text>
+				<leftMargin>19</leftMargin>
+			</cell>
+			<cell id="netAmountInclGst" type="Flaot">
+				<text>Total</text>
+				<leftMargin>10</leftMargin>
+				<rightMargin>55</rightMargin>
+			</cell>
+		</header>
+		<rowIdentificationColumn>1</rowIdentificationColumn>
+		<endOfTable>
+			<method>EndByText</method>
+			<endText>Order Weight:</endText>
+		</endOfTable>
+	</readTable>
+</config>
+
+<!--
+radType= {
+	"FullText" 		: read the text inside area and return whole text
+	"FindByTExt" 	: read text inside area line by line and use the provided string to find the line. once it found replace the search string with empty and return the rest of the line as the result 
+}
+-->
+
